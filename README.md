@@ -49,10 +49,12 @@ In addition to the above types, there are several "options" types available, wit
 
 ### JSON-LD operations
 
+#### Compact
 ```compact(documentToCompact: JsonLdDocument, context: JsonLdDocument, options?: CompactOptions): Promise<JsonLd>```
 
 Runs the JSON-LD compact algorithm on ```documentToCompact```, using the context in ```context```. Default value for ```options``` is ```{}```.
 
+#### Expand
 ```expand(documentToExpand: JsonLdDocument, options?: ExpandOptions): Promise<JsonLd>```
 
 Run the JSON-LD expand algorithm on ```documentToExpand```. Default value for ```options``` is ```{}```.
