@@ -4,31 +4,31 @@ Angular shim for the jsonld.js library. Inject an Angular provider to perform co
 
 ## Installation
 
-```npm install ng-jsonld```
+```npm install ngx-jsonld```
 
 ## Usage
 
-Register the ```JsonLdService``` in ```app.module.ts```.
+Register ```NgxJsonLd``` in ```app.module.ts```.
 ```
-import { JsonLdService } from 'ng-jsonld';
+import { NgxJsonLd } from 'ngx-jsonld';
 
-providers: JsonLdService
+providers: NgxJsonLd
 ```
 
-Then you can inject ```JsonLdService``` and use it anywhere in your application.
+Then you can inject ```NgxJsonLd``` and use it anywhere in your application.
 ```
-import { JsonLdService } from 'ng-jsonld';
+import { NgxJsonLd } from 'ng-jsonld';
 
 class foo {
-    constructor(private jsonld: JsonLdService) {
+    constructor(private jsonld: NgxJsonLd) {
         const example = 'some RDF string';
-        jsonld.fromRDF(example).then(res => console.log(res));
+        this.jsonld.fromRDF(example).then(res => console.log(res));
     }
 }
 ```
 ## Related
 
-See also the JSON-LD command line tool [jldc](https://github.com/Aaron-Sterling/jldc). Both ng-jsonld and jldc have as a dependency the official JSON-LD Javascript library [jsonld.js](https://github.com/digitalbazaar/jsonld.js/), written and supported by DigitalBazaar.
+See also the JSON-LD command line tool [jldc](https://github.com/Aaron-Sterling/jldc). Both ngx-jsonld and jldc have as a dependency the official JSON-LD Javascript library [jsonld.js](https://github.com/digitalbazaar/jsonld.js/), written and supported by DigitalBazaar.
 
 ## API
 
