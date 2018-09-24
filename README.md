@@ -1,23 +1,23 @@
-# ngx-jsonld
+# ngx-jsonld-provider
 
 Angular shim for the jsonld.js library. Inject an Angular provider to perform compact, flatten, expand, normalize, etc., algorithms on string, RDF, JSON, and JSON-LD inputs.
 
 ## Installation
 
-```npm install ngx-jsonld```
+```npm install ngx-jsonld-provider```
 
 ## Usage
 
 Register ```NgxJsonLd``` in ```app.module.ts```.
 ```
-import { NgxJsonLd } from 'ngx-jsonld';
+import { NgxJsonLd } from 'ngx-jsonld-provider';
 
-providers: NgxJsonLd
+providers: [ NgxJsonLd ]
 ```
 
 Then you can inject ```NgxJsonLd``` and use it anywhere in your application.
 ```
-import { NgxJsonLd } from 'ng-jsonld';
+import { NgxJsonLd } from 'ng-jsonld-provider';
 
 class foo {
     constructor(private jsonld: NgxJsonLd) {
@@ -28,7 +28,7 @@ class foo {
 ```
 ## Related
 
-See also the JSON-LD command line tool [jldc](https://github.com/Aaron-Sterling/jldc). Both ngx-jsonld and jldc have as a dependency the official JSON-LD Javascript library [jsonld.js](https://github.com/digitalbazaar/jsonld.js/), written and supported by DigitalBazaar.
+See also the JSON-LD NodeJS command line tool [jldc](https://github.com/Aaron-Sterling/jldc). Both ngx-jsonld and jldc have as a dependency the official JSON-LD Javascript library [jsonld.js](https://github.com/digitalbazaar/jsonld.js/), written and supported by DigitalBazaar. Cory Rylan has written [ngx-json-ld](https://github.com/coryrylan/ngx-json-ld), which uses an Angular component (not a provider) to connect to JSON-LD operations; that project is interesting, but appears to be archived and at least temporarily frozen.
 
 ## API
 

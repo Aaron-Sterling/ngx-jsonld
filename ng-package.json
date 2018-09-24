@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-jsonld",
+  "dest": "../../dist/ngx-jsonld-provider",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-jsonld",
+  "name": "ngx-jsonld-provider",
   "description": "Angular shim for JSON-LD operations. Inject an Angular provider that performs compaction and expansion, framing, RDf translation, etc. Built on top of jsonld.js.",
   "author": {
     "name": "Aaron Sterling",
