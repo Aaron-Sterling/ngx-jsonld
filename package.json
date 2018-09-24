@@ -1,0 +1,31 @@
+{
+  "name": "ngx-jsonld",
+  "description": "Angular shim for JSON-LD operations. Inject an Angular provider that performs compaction and expansion, framing, RDf translation, etc. Built on top of jsonld.js.",
+  "author": {
+    "name": "Aaron Sterling",
+    "email": "scifimadereal@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aaron-Sterling/ngx-jsonld"
+  },
+  "bugs": {
+    "url": "https://github.com/Aaron-Sterling/ngx-jsonld/issues"
+  },
+  "homepage": "https://github.com/Aaron-Sterling/ngx-jsonld",
+  "keywords": [
+    "angular",
+    "jsonld",
+    "ngx",
+    "json",
+    "json-ld"
+  ],
+
+  "license": "ISC",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "jsonld": "^1.1.0"
+  }
+}
