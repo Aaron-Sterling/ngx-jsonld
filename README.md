@@ -4,13 +4,15 @@ Angular shim for the jsonld.js library. Inject an Angular provider to perform co
 
 ## Installation
 
-### Step 1: Install dependencies
-
-```npm install jsonld ngx-jsonld-provider```
+#### Step 1: Install dependencies
+```
+npm install jsonld ngx-jsonld-provider
+npm install types/jsonld --save-dev
+```
 
 **IMPORTANT: You need Python 2.x (2.7 recommended) in order to build jsonld**, which is a peer dependency of ngx-jsonld-provider. jsonld has the [node-gyp](https://github.com/nodejs/node-gyp) library as a dependency. Building the node-gyp library requires Python 2.x; it *does not work* with Python 3.x. You do not need to know any Python to use this tool; the language is invisible after the build process.
 
-### Step 2: Add polyfill (for Angular 6+)
+#### Step 2: Add polyfill (for Angular 6+)
 
 The jsonld.js library, like many "older" libraries, uses the keyword ```global```, which is no longer supported in Angular 6. A temporary solution for this is to define ```global``` in your polyfills, as follows. Open your project's ```polyfills.ts```. In the APPLICATION IMPORTS section (at the bottom of the file), add the following lines:
 ```
@@ -20,7 +22,7 @@ The jsonld.js library, like many "older" libraries, uses the keyword ```global``
 
 ## Usage
 
-Register ```NgxJsonLd``` in ```app.module.ts```.
+Register ```NgxJsonLdProvider``` in ```app.module.ts```.
 ```
 import { NgxJsonLdProvider } from 'ngx-jsonld-provider';
 
@@ -29,12 +31,13 @@ providers: [ NgxJsonLdProvider ]
 
 Then you can inject ```NgxJsonLdProvider``` and use it anywhere in your application.
 ```
-import { NgxJsonLdProvider } from 'ng-jsonld-provider';
+import { NgxJsonLdProvider } from 'ngx-jsonld-provider';
 
 class foo {
-    constructor(private jsonld: NgxJsonLd) {
+    constructor(private jsonld: NgxJsonLdProvider) {
         const name = { 'http://schema.org/name': 'John Doe' };
-        this.jsonld.expand(name).then(res => console.log(res));
+        const context = { 'name': 'http://schema.org/name' };
+        this.jsonld.compact(name, context).then(res => console.log(res));
     }
 }
 ```
