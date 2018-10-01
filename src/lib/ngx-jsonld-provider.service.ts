@@ -6,6 +6,8 @@ import { DEFAULT_COMPACT_OPTIONS, DEFAULT_FLATTEN_OPTIONS, DEFAULT_EXPAND_OPTION
          DEFAULT_FRAME_OPTIONS, DEFAULT_NORMALIZE_OPTIONS, DEFAULT_TO_RDF_OPTIONS,
          DEFAULT_FROM_RDF_OPTIONS } from './defaults';
 import { JsonLdDocument } from './jsonld-document-model';
+import { HelpMessageTypes } from './help-message-service/help-message-types';
+import { helpMessage } from './help-message-service/help-message-service';
 
 @Injectable({
   providedIn: 'root'
@@ -102,6 +104,36 @@ export class NgxJsonLdProvider {
 
   getFromRdfOptions(): FromRdfOptions {
     return this.fromRdfOptions;
+  }
+
+  // help message getters
+
+  getCompactHelpMessage(): string {
+    return helpMessage(HelpMessageTypes.COMPACT);
+  }
+
+  getDeserializeHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.DESERIALIZE);
+  }
+
+  getExpandHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.EXPAND);
+  }
+
+  getFlattenHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.FLATTEN);
+  }
+
+  getFrameHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.FRAME);
+  }
+
+  getNormalizeHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.NORMALIZE);
+  }
+
+  getSerializeHelpMessage(): string {
+      return helpMessage(HelpMessageTypes.SERIALIZE);
   }
 }
 

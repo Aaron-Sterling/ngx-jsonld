@@ -128,3 +128,17 @@ setFrameOptions(newOptions: FrameOptions)
 setToRdfOptions(newOptions: ToRdfOptions)
 setFromRdfOptions(newOptions: FromRdfOptions)
 ```
+
+## Help Message Getters
+
+The following help message getters are available. Each returns a string that is based on the jsonld.js documentation.
+
+```
+getCompactHelpMessage(): string 
+getDeserializeHelpMessage(): string
+getExpandHelpMessage(): string 
+getFlattenHelpMessage(): string 
+getFrameHelpMessage(): string 
+getNormalizeHelpMessage(): string 
+getSerializeHelpMessage(): string 
+```

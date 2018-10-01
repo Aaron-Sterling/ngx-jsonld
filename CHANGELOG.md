@@ -1,5 +1,9 @@
 # ngx-jsonld Changelog
 
+## 1.1.0 (1 October 2018)
+
+Added help message getters.
+
 ## 1.0.0 (25 Sept 2018)
 
 Added instructions about using polyfill to run jsonld.js on Angular 6+.
